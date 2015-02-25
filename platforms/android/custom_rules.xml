@@ -2,6 +2,7 @@
 <project>
     <target name="-pre-compile">
         <!-- Fix library references due to bug in build.xml: See: https://groups.google.com/forum/#!topic/android-developers/0ivH-YqCjzg -->
+        <property file="../../../keys/secure.properties" />
         <pathconvert property="fixedJarsPath" refid="project.all.jars.path">
           <filtermapper>
             <replacestring from="/bin/" to="/ant-build/"/>
